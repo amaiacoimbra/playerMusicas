@@ -1,7 +1,14 @@
 let musicas = [ 
     {titulo: 'Od Yishama', artista: 'Jammy Jams', src: 'musicas/Country - Od Yishama - Jammy Jams.mp3', img: 'img/country.jpg'},
     {titulo: 'American Idle', artista: 'RKVC', src: 'musicas/Rock - American Idle - RKVC.mp3', img: 'img/rock.jpg'},
-    {titulo: 'A Year Ago', artista: 'NEFFEX', src: 'musicas/Pop - A Year Ago - NEFFEX.mp3', img: 'img/pop.jpg'}
+    {titulo: 'A Year Ago', artista: 'NEFFEX', src: 'musicas/Pop - A Year Ago - NEFFEX.mp3', img: 'img/pop.jpg'},
+    {titulo: 'Satisfaction Guaranteed', artista: 'Dan Lebowitz', src: 'musicas/Reggae - Satisfaction Guaranteed - Dan Lebowitz.mp3', img: 'img/reggae.jpg'},
+    {titulo: 'King Porter Stomp', artista: 'Joel Cummins', src: 'musicas/Jazz - King Porter Stomp - Joel Cummins.mp3', img: 'img/jazz.jpg'},
+    {titulo: 'Rainbow Forest', artista: 'Quincas Moreira', src: 'musicas/Infantil - Rainbow Forest - Quincas Moreira.mp3', img: 'img/infantil.jpg'},
+    {titulo: 'Road Tripzzz', artista: 'Ofshane', src: 'musicas/Hip-Hop - Road Tripzzz - Ofshane.mp3', img: 'img/hip-hop.jpg'},
+    {titulo: 'Press Fuse', artista: 'French Fuse', src: 'musicas/Eletronica - Press Fuse - French Fuse.mp3', img: 'img/eletronica.jpg'},
+    {titulo: 'In the Sweet By and By', artista: 'Zachariah Hickman', src: 'musicas/Country2 - In the Sweet By and By - Zachariah Hickman.mp3', img: 'img/country2.jpg'},
+    {titulo: 'Bourree', artista: 'Joel Cummins', src: 'musicas/Classica - Bourree - Joel Cummins.mp3', img: 'img/classica.jpg'}
 ]
 
 let musica = document.querySelector('audio')
@@ -24,14 +31,14 @@ musica.addEventListener('timeupdate', atualizarBarra)
 document.querySelector('.anterior').addEventListener('click', () => {
     indexMusica--
     if(indexMusica < 0) {
-        indexMusica = 2
+        indexMusica = 9
     }
     renderizarMusica(indexMusica)
 })
 
 document.querySelector('.proxima').addEventListener('click', () => {
     indexMusica++
-    if(indexMusica > 2) {
+    if(indexMusica > 9) {
         indexMusica = 0
     }
     renderizarMusica(indexMusica)
